@@ -30,9 +30,9 @@ class WhoopsForShopware extends Plugin
             $whoops     = new Run;
 
             if (
-                false !== strpos($requestUri, '/api')
-                || false !== strpos($requestUri, '/ajax')
-                || false !== strpos($requestUri, '/backend')
+                false !== \strpos($requestUri, '/api')
+                || false !== \strpos($requestUri, '/ajax')
+                || false !== \strpos($requestUri, '/backend')
                 || $subject->Request()->isXmlHttpRequest()
             ) {
                 $whoops->pushHandler(new JsonResponseHandler());
